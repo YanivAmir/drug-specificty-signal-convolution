@@ -1,14 +1,14 @@
 # drug-specificty-signal-convolution
 
-##Goal:
-This work demonstrates signal processing and filter convolution on human transcriptomic data, to screen for potential off target effects of a sequence-specific mRNA-targeting drug. The drug cleaves the mRNA at a specific location based on sequence recognition, and I wanted to measure if other sites in the human transcriptome are prone to cleaved by the potential drug, and to what extent.
+## Goal:
+This analysis I preformed demonstrates signal processing and filter convolution on human transcriptomic data, in order to screen for potential off target effects of a sequence-specific mRNA-targeting drug. The drug cleaves mRNA at a specific location based on sequence recognition. Based on prior bioinformatic analysis the human transcriptome contains only a single recognition site, which is the intended cleavage site. I wanted to experimentally measure whether other sites exist in the human transcriptome which are prone for cleavage by the  drug, and to what extent. 
 
-##Method:
-The drug was incubated at large concentration (beyond saturation) with target cell line RNA and a sample of the RNA was sequenced using NGS, after one hour, from both control and experimental groups, with three repeats each. 
+## Method:
+The drug was incubated at large concentration (beyond saturation) with target cell line RNA and a sample of the RNA was sequenced using NGS one hour after incubation. Both untreated control and experimental samples were taken, three replicates each. Alignment of sequencing results to human genome was preformed using STAR.
 
  
-##Sample Results:
-The figure below shows the true cleavage site of the drug, that is the true drug target in the transcriptome. The positive control target cleavage site is shown in red. The X -axis is the nucleotide number, where zero marks the cleavage site. The Y-axis shows the coverage depth of each nucleotide in the sequencing analysis. The three separate lines reflect the three replicates. Compared with the negative control samples, in blue, the cleavage site is characterized by a considerable reduction in sequencing coverage, which spans ten nucleotides from the cleavage site.
+## Sample Results:
+The figure below shows the true cleavage site of the drug, and its effect in the true mRNA drug target. The positive control target cleavage site is shown in red. The X -axis is the nucleotide index number, where zero marks the cleavage site. The Y-axis shows the coverage depth of each nucleotide in the sequencing analysis, i.e in how many reading blocks did the specific nucleotide appear in the sequencing results. The three separate lines reflect the three replicates. Compared with the negative control samples, in blue, the cleavage site is characterized by a considerable reduction in sequencing coverage, which spans ten nucleotides from the cleavage site.
 
 ![image](https://github.com/user-attachments/assets/0a149184-1454-4e3d-9aad-d2a24eb40b38)
 
@@ -20,7 +20,7 @@ A total of 8000 locations in the transcriptome received a score of >50. These si
 
 ![image](https://github.com/user-attachments/assets/3882e060-bb9f-4ca2-bd94-fdd86b42dea1)
 
-#Summary:
+## Summary:
 These are preliminary results showing positive indications that no potential off-target cleavage sites exists, comparable in strength to the true cleavage site of the drug, in the human transcriptome under the conditions that were measured. Naturally a more in depth investigation is required to validate these result.
 
 
